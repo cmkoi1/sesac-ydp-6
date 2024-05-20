@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 실습</title>
+</head>
+
+<body>
+    <h3>설문조사</h3>
+    <form>
+        <div>
+            <label for="user-name">이름</label>
+            <input type="text" id="user-name">
+            <br>
+            <label for="user-email">이메일</label>
+            <input type="text" id="user-email" placeholder="love@example.com">
+        </div>
+
+        <h4>나이</h4>
+        <div>
+            <input type="radio" name="age" id="user-age"><label for="user-age">10대</label>
+            <input type="radio" name="age" id="user-age"><label for="user-age">20대</label>
+            <input type="radio" name="age" id="user-age"><label for="user-age">30대</label>
+            <input type="radio" name="age" id="user-age"><label for="user-age">40대</label>
+            <input type="radio" name="age" id="user-age"><label for="user-age">50대</label>
+            <input type="radio" name="age" id="user-age"><label for="user-age">60대 이상</label>
+
+        </div>
+
+
+        <h4>원하는 강의(복수응답 가능합니다.)</h4>
+        <div>
+            <input type="checkbox" name="lecture" value="html" id="user-lecture"><label for="user-lecture">html</label>
+            <input type="checkbox" name="lecture" value="javascript" id="user-lecture"><label
+                for="user-lecture">javascript</label>
+            <input type="checkbox" name="lecture" value="css" id="user-lecture"><label for="user-lecture">css</label>
+        </div>
+        <br>
+        <textarea placeholder="하고 싶은 말을 써주세요:)" cols="80" rows="10"></textarea>
+        <input type="submit" value="제출">
+    </form>
+</body>
+
+</html>
