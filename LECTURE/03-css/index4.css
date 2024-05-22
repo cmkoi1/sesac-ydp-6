@@ -1,0 +1,66 @@
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+/* 
+    :hover : 요소에 마우스를 올렸을 때
+*/
+.div1:hover {
+    background-color: hotpink;
+    width: 150px;
+    height: 150px;
+}
+
+/* 
+    :active : 요소를 마우스로 클릭하고 있을 때
+*/
+.div1:active {
+    background-color: brown;
+    width: 200px;
+}
+
+/* 
+    :focus : 요소에 포커스가 됐을 때
+*/
+input:focus {
+    background-color: violet;
+    color: lightblue;
+    outline-color: yellowgreen;
+}
+
+.links > a:hover {
+    background-color: coral;
+}
+
+.links > a:visited {
+    color: red;
+}
+
+/* 요소 상황에 따른 가상 클래스 선택자 */
+.zoo > * {
+    background-color: green;
+    color: white;
+}
+
+/* 1. E:first-child : E(요소)가 첫 번째 요소라면 */
+.zoo > *:first-child { 
+    /* *는 생략 혹은 h1으로 변경 가능하며, div로 바꾸면 선택이 되지 않는다.*/
+    background-color: red
+}
+
+/* 2. E:last-child : E(요소)가 마자막 요소라면 */
+.zoo > li:last-child {
+    background-color: black;
+}
+
+/* 3. E:nth-child(n) : E(요소)가 n번째 요소라면 */
+.zoo > *:nth-child(2) {
+    background-color: aqua;
+}
+
+/* 4. E:not(XYZ) : xzy가 아닌 E(요소) 선택 */
+.zoo > *:not(div){
+    background-color: pink;
+}
