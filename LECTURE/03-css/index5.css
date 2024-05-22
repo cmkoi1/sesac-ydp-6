@@ -1,0 +1,42 @@
+/* 웹 폰트(web-font) */
+/* 
+    - 구글 웹 폰트, 눈누 웹 폰트
+    - 모든 브라우저에서 보는 폰트를 통일
+    - 폰트를 다운로드 x, link 태그에 걸려있는 주소에서 폰트를 가져오는 방식
+    - 보통 기본 폰트는 body 태그에 작성
+
+    - 구글 웹 폰트 https://fonts.google.com/?subset=korean&noto.script=Kore
+    - 눈누 https://noonnu.cc
+*/
+@font-face {
+    font-family: 'TTLaundryGothicB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCrownMychewR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /* font-family: "Poetsen One", sans-serif; */
+    /* "Poetsen One 사용, 없다면  sans-serif 대체 */
+    font-family: 'TTLaundryGothicB';
+}
+
+div {
+    font-family: "Poetsen One", sans-serif;
+}
+
+span {
+    font-family: 'TTCrownMychewR';
+    font-size: large;
+}
+.sad {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: large;
+}

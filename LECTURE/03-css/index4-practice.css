@@ -32,3 +32,15 @@ input:focus {
     background-color: yellow;
     color: black;
 } */
+
+[disabled] {
+    background-color: red;
+}
+
+[placeholder="이름"] {
+    background-color: orange;
+}
+
+input:not([placeholder]) {
+    background-color: blue;
+}
