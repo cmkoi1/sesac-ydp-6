@@ -1,0 +1,34 @@
+.d-inline1 {
+    display: inline;
+    background-color: lightblue;
+    width: 100px;
+}
+
+.d-inline2 {
+    display: inline;
+    background-color: lightcoral;
+}
+
+.d-block1 {
+    display: block;
+    background-color: lightblue;
+    width: 100px;
+}
+
+.d-block2 {
+    display: block;
+    background-color: lightcoral;
+}
+
+.d-inline-block1 {
+    display: inline-block;
+    background-color: lightblue;
+}
+
+.d-inline-block2 {
+    display: inline-block;
+    background-color: lightcoral;
+    width: 200px;
+    height: 300px;
+    margin: 20px 40px;
+}

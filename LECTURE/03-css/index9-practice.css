@@ -1,0 +1,91 @@
+.black-box {
+    width: 100px;
+    height: 100px;
+
+    color: white;
+    background-color: black;
+
+    overflow: auto;
+}
+
+.black-box:hover {
+    transform: scale(3, 3);
+    transition: transform 1s 0.5s;
+}
+
+.container1 {
+    background-color: lightgrey;
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+img {
+    height: 250px;
+    position: absolute;
+    transform: skewY(20deg);
+    top: 35%;
+}
+
+.img1 {
+    left: 20%;
+    z-index: 3;
+}
+.img1:hover, .img2:hover, .img3:hover {
+    transform: skewY(0deg);
+    transition: transform 1s;
+    z-index: 4;
+}
+.img2 {
+    left: 35%;
+    z-index: 2;
+}
+.img3 {
+    left: 50%;
+}
+
+.container2 {
+    width: 100%;
+    height: 500px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    border: 1px solid black;
+
+    transition-duration: 1s;
+    transition-property: background-color border-radius;
+}
+
+.box1 {
+    transform-origin: left;
+}
+
+.box2 {
+    transform-origin: left bottom;
+}
+
+.box4 {
+    transform-origin: top;
+}
+
+.box1:hover {
+    transform: scaleX(2);
+}
+
+.box2:hover {
+    transform: skewX(-20deg);
+}
+
+.box3:hover {
+    transform: translateX(300px)  rotate(120deg);
+    border-radius: 50%;
+    background-color: red;
+} 
+
+.box4:hover {
+    background-color: yellow;
+    transform: scale(2) rotateY(360deg);
+}

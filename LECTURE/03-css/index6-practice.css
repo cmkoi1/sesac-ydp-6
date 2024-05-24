@@ -1,0 +1,32 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: skyblue;
+    position: relative;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+}
+
+.item1 {
+    position: relative;
+    left: 50px;
+    top: 30px;
+    background-color: red;
+}
+
+.item2 {
+    right: 30px;
+    bottom: 100px;
+    background-color: blue;
+    position: absolute;
+}
+
+.item3 {
+    right: 100px;
+    top: 100px;
+    background-color: yellow;
+    position: fixed;
+}

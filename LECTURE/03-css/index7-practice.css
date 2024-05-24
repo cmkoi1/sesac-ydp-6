@@ -1,0 +1,71 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.div1 {
+    background-color: rgb(0, 0, 47);
+    z-index: 1;
+    top: 100px;
+    left: 100px;
+    position: relative;
+}
+
+.div2 {
+    background-color: rgb(0, 0, 95);
+    z-index: 2;
+    top: 150px;
+    left: 150px;
+}
+
+.div3 {
+    background-color: rgb(0, 0, 138);
+    z-index: 3;
+    top: 200px;
+    left: 190px;
+}
+
+.div4 {
+    background-color: rgb(0, 0, 201);
+    z-index: 4;
+    top: 250px;
+    left: 210px;
+}
+
+.div5 {
+    background-color: rgb(0, 0, 255);
+    z-index: 6;
+    top: 290px;
+    left: 260px;
+}
+
+.div6 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 7;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.div7 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 8;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+img {
+    z-index: 5;
+    position: absolute;
+    top: 290px;
+    width: 600px;
+}
