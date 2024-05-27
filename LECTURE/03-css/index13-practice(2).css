@@ -1,0 +1,31 @@
+.lorem-container {
+    height: 50vh;
+    width: 100vw;
+    position: relative;
+}
+
+.move-lorem {
+    position: absolute;
+    width: 100%;
+    animation: lorem 2s linear 1;
+}
+
+@keyframes lorem {
+    /* from {
+        transform: translate(calc(100vw - 100px), 0px);
+    }
+
+    to {
+        transform: translate(0px);
+    } */
+
+    from {
+        left: 100%;
+        width: 300%;
+    }
+
+    to {
+        left: 0%;
+        width: 100%;
+    }
+}

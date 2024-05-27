@@ -12,10 +12,30 @@
     width: 300px;
     height: 300px;
 
-    background-image: url("./image/image.png");
-
-    border-image: linear-gradient(purple, yellow) 27 / 3px;
     border-image-outset: 6px;
+    border: 3px solid transparent;
     border-radius: 50%;
+    background-image: url("./image/image.png"),
+        linear-gradient(to right, red 0%, orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 } */
 
+.background {
+    background: linear-gradient(to right, red 0%, orange 100%);
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.background>img {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-size: cover;
+    left: 5px;
+    top: 5px;
+}
