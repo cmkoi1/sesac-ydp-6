@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li {
+      margin: 4px 0;
+    }
+
+    .done>span {
+      text-decoration: line-through;
+      font-style: italic;
+      color: #bbb;
+    }
+
+    .todo>span {
+      font-weight: 700;
+      background-color: rgb(255, 233, 111);
+    }
+  </style>
+</head>
+
+<body>
+  <div>민트 초코는 <span>맛있다 >_<< /span>
+  </div>
+  <hr><br>
+
+  <div class="container">
+    <h2>TODO List</h2>
+    <ul>
+      <li class="todo">
+        <span>점심 먹기</span>
+      </li>
+      <li class="todo">
+        <span>커피 마시기</span>
+      </li>
+      <li class="done">
+        <span>과제 완성하기</span>
+      </li>
+      <li class="done">
+        <span>운동하기</span>
+      </li>
+      <li class="done">
+        <span>저녁먹기</span>
+      </li>
+    </ul>
+  </div>
+  <hr><br>
+
+  <form>
+    <label for="value1">값1:</label>
+    <input type="number" id="value1" /><br />
+    <label for="value2">값2:</label>
+    <input type="number" id="value2" /><br />
+    <label for="operator">연산자: </label>
+    <input type="text" id="operator" /><br />
+    <button type="button" onclick="cal();">계산</button>
+    <button type="button" onclick="reset();">초기화</button><br /><br />
+    <label for="result">결과: </label>
+    <input type="text" id="result" disabled="true" />
+  </form>
+  <hr><br>
+
+  <form>
+    <label for="writer">작성자</label>
+    <input type="text" id="writer" autocomplete="off" />
+    <br />
+    <br />
+
+    <label for="content">내용</label>
+    <input type="text" id="content" style="width: 500px" autocomplete="off" />
+    <br />
+    <br />
+
+    <button type="button" onclick="writeNote();">등록</button>
+  </form>
+  <br />
+  <br />
+
+  <table id="table" border="1" cellpadding="10" cellspacing="1">
+    <tr>
+      <th>작성자</th>
+      <th>내용</th>
+      <th>작성일</th>
+    </tr>
+    <!-- 
+        코드 추가 예시
+        <tr>
+          <td>홍길동</td>
+          <td>하이</td>
+          <td>2022-10-05 12:34</td>
+        </tr>
+      -->
+  </table>
+
+  <script>
+    let span = document.querySelector("div span");
+    span.style.color = "red"
+    span.style.fontWeight = "900"
+    span.innerHTML = "맛없다 ㅡㅡ;";
+
+    let container = document.querySelectorAll("ul > li");
+    container.forEach(element => {
+      element.classList.toggle("done");
+      element.classList.toggle("todo");
+    });
+
+    function cal() {
+      let val1 = Number(document.querySelector("#value1").value);
+      let val2 = Number(document.querySelector("#value2").value);
+      let oper = document.querySelector("#operator").value;
+      let result = document.querySelector("#result");
+
+      if (val1 && val2) {
+        if (oper === "+") {
+          result.value = val1 + val2
+        } else if (oper === "-") {
+          result.value = val1 - val2
+        } else if (oper === "*") {
+          result.value = val1 * val2
+        } else if (oper === "/") {
+          result.value = val1 / val2
+        } else {
+          result.value = "+, -, *, / 중 입력해 주세요."
+        }
+      } else {
+        result.value = "값을 입력해 주세요."
+      }
+
+    }
+    function reset() {}
+
+    function writeNote() {
+      const writer = document.querySelector('.writer')
+    }
+  </script>
+</body>
+
+</html>
