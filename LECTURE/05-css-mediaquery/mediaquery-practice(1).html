@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediaquery 실습 1</title>
+    <style>
+      @font-face {
+        font-family: "Ownglyph_meetme-Rg";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @media (min-width: 500px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+      @media (max-width: 301px) and (min-width: 499px) {
+        body {
+          background-color: skyblue;
+        }
+      }
+      @media (max-width: 300px) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media (max-height: 300px) {
+        p {
+          background-color: skyblue;
+          font-family: "Ownglyph_meetme-Rg";
+        }
+      }
+      @media (min-height: 500px) {
+        p {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>미디어 쿼리 실습</p>
+  </body>
+</html>

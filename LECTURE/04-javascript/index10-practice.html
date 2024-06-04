@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 내장 메소드 & 내장 객체 실습</title>
+    <script>
+      let arr = [];
+      let sum1 = 0,
+        sum2 = 0,
+        sum3 = 0;
+      for (let i = 1; i <= 100; i++) {
+        arr[i-1] = i;
+        sum1 += arr[i-1];
+      }
+      console.log(arr);
+      console.log(sum1);
+
+      for (arrs of arr) {
+        sum2 += arrs;
+      }
+      console.log(sum2);
+
+      arr.forEach(function (arr, i) {
+        sum3 += arr;
+      });
+      console.log(sum3);
+
+      let fruits1 = ["사과", "딸기", "파인애플", "수박", "참외", "오렌지", "자두", "망고"];
+      let fruits2 = ["수박", "사과", "참외", "오렌지", "파인애플", "망고"];
+
+      let same = [];
+      let diff = [];
+      for (let i = 0; i < fruits1.length; i++) {
+        if (fruits2.includes(fruits1[i])) {
+          same.push(fruits1[i]);
+        } else {
+          diff.push(fruits1[i]);
+        }
+      }
+      console.log(same);
+      console.log(diff);
+    </script>
+  </head>
+  <body>
+    <h2>JS 내장 메소드 & 내장 객체 실습</h2>
+  </body>
+</html>

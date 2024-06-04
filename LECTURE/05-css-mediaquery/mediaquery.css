@@ -39,7 +39,7 @@
         height: 50px;
     }
 }
-@media screen and (max-width: 480px) and (max-width: 768px){
+@media screen and (min-width: 480px) and (max-width: 768px){
     /* 화면 너비가 481px ~ 768px */
     .header {
         height: 150px;

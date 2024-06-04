@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediaquery 실습 2</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      border-radius: 5%;
+      margin: 20px;
+    }
+
+    @media (min-width: 701px) {
+      .container {
+        display: flex;
+      }
+      .box {
+        background-color: black;
+        margin: 10px;
+      }
+    }
+    @media (max-width: 700px) {
+      .box {
+        background-color: skyblue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>

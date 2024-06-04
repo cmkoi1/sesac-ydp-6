@@ -1,15 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index13-practice(3).css">
-    <title>Animation 실습 3</title>
-</head>
-<body>
-    <div class="divs head"></div>
-    <div class="divs body"></div>
-    <div class="divs foot left-foot"></div>
-    <div class="divs foot right-foot"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation 실습 4 - Animation Human</title>
+    <style>
+      .human {
+        background-color: lightcoral;
+        position: absolute;
+      }
+      .human-head {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        left: 50%;
+        top: 40%;
+
+        animation: head-move 4s linear infinite;
+      }
+      @keyframes head-move {
+        0% {
+          top: 40%;
+        }
+        25% {
+          top: 38%;
+        }
+        50% {
+          top: 40%;
+        }
+        75% {
+          top: 38%;
+        }
+        100% {
+          top: 40%;
+        }
+      }
+      .human-body {
+        width: 50px;
+        height: 120px;
+        border-radius: 90% 15% 0px 0px;
+        left: 45%;
+        top: 45%;
+
+        animation: body-move 4s linear infinite;
+      }
+      @keyframes body-move {
+        0% {
+          top: 45%;
+        }
+        25% {
+          top: 43%;
+        }
+        50% {
+          top: 45%;
+        }
+        75% {
+          top: 43%;
+          transform: skew(-2deg);
+        }
+        100% {
+          top: 45%;
+        }
+      }
+      .human-foot {
+        width: 30px;
+        height: 10px;
+        border-radius: 30% 80% 20% 30%;
+        top: 65%;
+      }
+
+      .left {
+        left: 49%;
+        animation: left-move 2s linear infinite;
+      }
+      @keyframes left-move {
+        0% {
+          top: 65%;
+          left: 49%;
+        }
+        25% {
+          top: 65%;
+          left: 47%;
+        }
+        50% {
+          top: 65%;
+          left: 44%;
+        }
+        75% {
+          top: 64%;
+        }
+        100% {
+          top: 65%;
+          left: 49%;
+        }
+      }
+      .right {
+        left: 44%;
+        animation: right-move 2s linear infinite;
+      }
+      @keyframes right-move {
+        0% {
+          top: 65%;
+          left: 44%;
+        }
+        25% {
+          top: 64%;
+        }
+        50% {
+          top: 65%;
+          left: 49%;
+        }
+        75% {
+          top: 65%;
+          left: 47%;
+        }
+        100% {
+          top: 65%;
+          left: 44%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="human human-head"></div>
+      <div class="human human-body"></div>
+      <div class="human human-foot left"></div>
+      <div class="human human-foot right"></div>
+    </div>
+  </body>
 </html>

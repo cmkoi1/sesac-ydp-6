@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediaquery 실습 3</title>
+    <script
+      src="https://kit.fontawesome.com/e0b757aa2b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      header {
+        background-color: skyblue;
+        height: 30px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .fa-mug-saucer {
+        color: white;
+        font-size: 30px;
+        display: flex;
+      }
+
+      @media (min-width: 767px) {
+        .fa-bars {
+          visibility: hidden;
+        }
+        nav {
+          width: 180px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      @media (max-width: 768px) {
+        nav {
+          background-color: lightblue;
+          position: absolute;
+          width: 100%;
+          top: 50px;
+          text-align: center;
+        }
+        nav > div {
+          height: 40px;
+          align-content: center;
+        }
+        nav > div:hover {
+          background-color: black;
+          color: white;
+        }
+        .fa-mug-saucer {
+          display: flex;
+          justify-content: center;
+        }
+        .fa-bars {
+          position: absolute;
+          right: 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-mug-saucer"></i>
+      <nav>
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+        <div>메뉴4</div>
+      </nav>
+      <i class="fa-solid fa-bars"></i>
+    </header>
+  </body>
+</html>
