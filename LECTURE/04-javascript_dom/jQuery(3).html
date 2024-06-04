@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .css1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+    <script>
+      function findParent() {
+        // parent() : 부모 요소를 반환
+        console.log($(".child2").parent());
+        console.log($(".child2").parent()[0]);
+        $(".child2").parent().css("color", "red");
+      }
+      function findParents() {
+        // parents() : 조상요소를 모두 반환
+        console.log($(".child2").parents());
+        $(".child2").parents().css("color", "red");
+        console.log($(".child2").parents()[1]);
+      }
+      function findNext() {
+        // next() : 내 다음 형제를 보는 친구
+        // document의 nextElementSibling과 동일
+        console.log($(".child2").next());
+        console.log($(".child2").next()[0]);
+        $(".child2").next().css("color", "red");
+      }
+      function findPrev() {
+        // prev() : 내 이전 형제를 보는 친구
+        // document의 previousElementSibling과 동일
+        console.log($(".child3").prev());
+        console.log($(".child3").prev()[0]);
+        $(".child3").prev().css("color", "blue");
+      }
+      function findChildren() {
+        // children() : 부모 요소를 선택했을 때 그 자식요소들을 반환
+        // document의 children과 동일
+        console.log($(".parent").children());
+        console.log($(".parent").children()[0]);
+        $(".parent").children().css("color", "blue");
+        // 요소를 선택하기 때문에 text는 제외한다.
+      }
+
+      function addClass() {
+        // $().addClass("클래스명")
+        $(".div1").addClass("css1");
+      }
+      function removeClass() {
+        $("div").removeClass("css1");
+      }
+      function hasClass() {
+        alert($("div").hasClass("css1"));
+      }
+      function toggleClass() {
+        $(".div1").toggleClass("css1");
+      }
+    </script>
+  </head>
+  <body>
+    <h5>요소 탐색</h5>
+    <div class="ancestor">
+      <div class="parent">
+        <div class="child1">자식1</div>
+        <div class="child2">자식2</div>
+        텍스트
+        <div class="child3">자식3</div>
+      </div>
+    </div>
+
+    <button onclick="findParent()">findParent</button>
+    <button onclick="findParents()">findParents</button>
+    <button onclick="findNext()">findNext</button>
+    <button onclick="findPrev()">findPrev</button>
+    <button onclick="findChildren()">findChildren</button>
+    <br />
+
+    <div class="div1"></div>
+    <!-- <div class="div1 css1"></div> -->
+    <button onclick="addClass()">addClass</button>
+    <button onclick="removeClass()">removeClass</button>
+    <button onclick="hasClass()">hasClass</button>
+    <button onclick="toggleClass()">toggleClass</button>
+  </body>
+</html>

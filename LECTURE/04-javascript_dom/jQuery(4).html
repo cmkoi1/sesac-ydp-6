@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 리스너</title>
+    <style>
+      .hover {
+        background-color: red;
+      }
+      body {
+        height: 1000px;
+      }
+      .p2 {
+        position: fixed;
+      }
+    </style>
+    <script>
+      $(window).ready(function () {
+        $(".p1").text("ready 메서드 실행");
+      });
+    </script>
+  </head>
+  <body>
+    <p class="p1"></p>
+    <br />
+
+    <button>button</button>
+    <input class="input1"/>
+    <br />
+
+    <p class="p2">코딩온</p>
+    <br />
+
+    <input />
+
+    <script>
+      // 로딩 이벤트
+      // 아래 3개의 이벤트 모두 DOM 요소가 불러와진 후에 실행
+      $(window).ready(function () {
+        console.log("로드 완료1");
+      });
+      $(function () {
+        console.log("로드 완료3");
+      });
+      $(document).ready(function () {
+        console.log("로드 완료2");
+      });
+
+      $("button").click(function () {
+        alert("click");
+      });
+      $(".input1").mouseover(function () {
+        alert("mouseover");
+      });
+      $("button").hover(
+        function () {
+          $(this).addClass("hover");
+        },
+        function () {
+          $(this).removeClass("hover");
+        }
+      );
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > 50) {
+          $(".p2").css("backgroundColor", "green");
+        } else {
+          $(".p2").css("backgroundColor", "red");
+        }
+      });
+
+      $("input").on("keyup", function (e) {
+        console.log(e);
+        console.log(e.key);
+        console.log(e.keyCode);
+        console.log(e.currentTarget);
+        console.log(e.currentTarget.value);
+      });
+      $("input").on("keydown", function (e) {
+        console.log(e);
+        console.log(e.key);
+        console.log(e.keyCode);
+        console.log(e.currentTarget);
+        console.log(e.currentTarget.value);
+      });
+      $;
+    </script>
+  </body>
+</html>

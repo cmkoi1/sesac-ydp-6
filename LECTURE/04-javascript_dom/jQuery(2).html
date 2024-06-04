@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQeury 연습</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        background-color: skyblue;
+        display: flex;
+        height: 150px;
+      }
+
+      .item {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      .pink {
+        background-color: pink;
+      }
+
+      .green {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="이름을 입력하세요" />
+
+    <button type="button" onclick="getValue();">버튼1</button>
+    <button type="button" onclick="setValue();">버튼2</button>
+    <br />
+
+    <script>
+      function getValue() {
+        let value = $("input").val();
+        alert(value);
+      }
+
+      function setValue() {
+        $("input").val("코딩온");
+      }
+    </script>
+
+    <ul type="circle">
+      <li id="apple">사과</li>
+      <li id="banana">바나나</li>
+      <li id="strawberry">딸기</li>
+      <li id="grape">포도</li>
+    </ul>
+
+    <button type="button" onclick="getAttr();">버튼1</button>
+    <button type="button" onclick="setAttr();">버튼2</button>
+    <br />
+
+    <script>
+      function getAttr() {
+        let ulType = $("ul").attr("type");
+        alert(ulType);
+      }
+      function setAttr() {
+        $("#strawberry").attr("style", "color: red;");
+      }
+    </script>
+
+    <div class="container">
+      <div class="item pink"></div>
+      <div class="item pink"></div>
+      <div class="item pink"></div>
+    </div>
+
+    <button type="button" onclick="usePrepend();">prepend</button>
+    <button type="button" onclick="useAppend();">append</button>
+    <button type="button" onclick="useBefore();">before</button>
+    <button type="button" onclick="useAfter();">after</button>
+    <button type="button" onclick="useRemove();">remove</button>
+    <button type="button" onclick="useEmpty();">empty</button>
+
+    <script>
+      function usePrepend() {
+        $(".container").prepend('<div class="item green"></div>');
+      }
+
+      function useAppend() {
+        $(".container").append('<div class="item green"></div>');
+      }
+
+      function useBefore() {
+        $(".container").before('<div class="item green"></div>');
+      }
+
+      function useAfter() {
+        $(".container").after('<div class="item green"></div>');
+      }
+
+      function useRemove() {
+        $(".container").remove();
+      }
+
+      function useEmpty() {
+        $(".container").empty();
+      }
+    </script>
+  </body>
+</html>
