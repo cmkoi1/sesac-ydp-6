@@ -10,6 +10,8 @@ app.set('views', './views');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use('/static', 
+    express.static(__dirname + '/public'));
 app.use('/uploads', express.static(__dirname + '/uploads'));
 // const upload = multer({
 //     dest: 'uploads/',
@@ -67,6 +69,11 @@ app.post('/upload/fields', uploadDetail.fields([{ name: 'kiwi' }, { name: 'orang
     res.send('Success Upload!! (multiple2)');
 });
 
+// 동적 폼 업로드
+app.post('/dynamicFile', uploadDetail.single('thumbnail'), (req, res) => {
+    res.send(req.file);
+})
+
 app.get('/', function (req, res) {
     res.render('index', { title: '파일 업로드를 배워보자!!!' });
 });
@@ -74,4 +81,11 @@ app.get('/', function (req, res) {
 app.listen(PORT, function () {
     console.log(`http://localhost:${PORT}`);
 });
+
+
+
+app.post('/upload/practice', uploadDetail.single('practiceFile'), (req, res) => {
+    res.send(req.file);
+    console.log(req.body);
+})
   

@@ -1,0 +1,14 @@
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0002;
+}
+
+.practiceFile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #0002; 
+    background-size: contain;
+}
