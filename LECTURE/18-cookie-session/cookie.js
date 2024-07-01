@@ -13,6 +13,13 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // cookie-parser 미들웨어 
+// ver1. 평문 쿠키
+// app.use(cookieParser());
+// const cookieConfig = {
+//     httpOnly: true, 
+//     maxAge: 60 * 1000, 
+// }
+// ver2. 서명 쿠키
 app.use(cookieParser(process.env.COOKIE_SECRET));
 const cookieConfig = {
     httpOnly: true, // 웹 서버를 통해서만 쿠키에 접근 가능 -> front js에서 document.cookie 로 접근 차단,
