@@ -1,0 +1,17 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+    background-color: rgba(0, 42, 255, 0.366);
+    margin: 0px;
+    text-align: center;
+}
+
+#list {
+    background-color: rgba(0, 0, 255, 0.089);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+}

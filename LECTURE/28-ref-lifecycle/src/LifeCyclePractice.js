@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './LifeCyclePractice.css'
 
 export default function LifeCyclePractice() {
     const fakePosts = [
@@ -65,18 +66,16 @@ export default function LifeCyclePractice() {
     }, [])
 
     return (
-        <div>
-            <div>Post List</div>
+        <>
+            <h2>Post List</h2>
             {posts.length === 0
                 ? <div>Loading...</div>
-                : <ul>
-                    {posts.map((post) => {
-                        <li key={post.id}>
-                            <p>No. {post.id}- {post.title}</p>
-                            <p>{post.body}</p>
-                        </li>
-                    })}
-                </ul>}
-        </div>
+                : posts.map((post) => (
+                    <div key={post.id} id='list'>
+                        <p>No. {post.id}- {post.title}</p>
+                        <p>{post.body}</p>
+                    </div>
+                ))}
+        </>
     )
 }
