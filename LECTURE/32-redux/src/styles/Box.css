@@ -1,0 +1,16 @@
+.Box{
+  border: 2px solid blue;
+  margin: 10px;
+}
+.Box2{
+  border: 2px solid red;
+  margin: 10px;
+}
+.Box3{
+  border: 2px solid green;
+  margin: 10px;
+}
+.Box4{
+  border: 2px solid purple;
+  margin: 10px;
+}
